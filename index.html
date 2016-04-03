@@ -4,10 +4,10 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js – The HTML Presentation Framework</title>
+		<title>ReactJS/Flux</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="description" content="Développer une Application ReactJS/Flux : exemple de la refonte de RemixJobs">
+		<meta name="author" content="Chloé Gence et Florent Teissier">
 
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -15,7 +15,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+		<link rel="stylesheet" href="css/custom/rjday.css">
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -40,12 +41,92 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
-					<h1>Reveal.js</h1>
-					<h3>The HTML Presentation Framework</h3>
+				<section class="slide-1">
+					<h1>Développer une Application ReactJS/Flux</h1>
+					<h3>Exemple de la refonte de RemixJobs</h3>
 					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
+						<small>Chloé Gence (<a href="http://twitter.com/snahedis">@snahedis</a>) et Florent Teissier (<a href="http://twitter.com/FTeissier">@FTeissier</a>)</small>
 					</p>
+				</section>
+
+				<section class="slide-2">
+					<h2>Pourquoi une refonte ?</h2>
+					<ul>
+						<li>Application devenue trop hétérogène au fil des années</li>
+						<li>Difficulté pour maintenir l'application</li>
+						<li>Impossibilité de tester l'application front</li>
+					</ul>
+				</section>
+
+				<section class="slide-3">
+					<h2>
+						<img src="img/react-logo.png" height="100" with="100"><br>				
+						React
+					</h2>
+					<ul>
+						<li>Créée en 2013 par Facebook</li>
+						<li>Plus une librairie qu'un framework</li>
+						<li>Souvent considérée comme le V de MVC</li>
+					</ul>					
+				</section>
+
+				<section class="slide-4">
+					<h2>Comment gérer une UI amenée à se transformer ?</h2>
+				</section>
+
+				<section class="slide-5">
+					<h2>Data-binding</h2>
+					<ul>
+						<li>Rendu de l’UI à l’initialisation</li>
+						<li>Mise à jour des "bindings" quand les données changent</li>
+					</ul>
+				</section>
+
+				<section class="slide-5">
+					<h2>Et si on réinitialisait la vue à chaque changement ?</h2>
+				</section>
+
+				<section class="slide-6">
+					<h2>La solution React : <br>le "Virtual DOM"</h2>
+					<ul>
+						<p>
+							Le DOM n'est pas optimisé pour gérer des UI dynamiques.<br>
+							Soit, utilisons une abstraction de ce DOM, un DOM virtuel.
+						</p>
+					</ul>
+				</section>
+
+				<section class="slide-7">
+					<h2>Et concrètement ?</h2>
+					<p>Dans React tout est composant, et chaque composant possède une méthode <code>render</code>.</p>
+					<ol>
+						<li><code>render</code> est appelée à l'initialisation du composant</li>
+						<li>Le Virtual DOM puis le DOM sont mis à jour</li>
+						<li><code>render</code> est à nouveau appelée quand les données du composant changent</li>
+						<li>Le Virtual DOM est mis à jour</li>
+						<li>React compare l'ancienne représentation du composant avec la nouvelle : "Reconciliation"</li>
+						<li>Le DOM est mis à jour</li>
+					</ol>
+				</section>
+
+				<section class="slide-8">
+					<h2>Hello World</h2>
+					<a class="jsbin-embed" href="http://jsbin.com/heyimu/embed?js,output">JS Bin on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.35.12"></script>
+				</section>
+
+				<section class="slide-9">
+					<h2>Des composants imbriquables</h2>
+					<a class="jsbin-embed" href="http://jsbin.com/dutiva/embed?js,output">Add one button on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.35.12"></script>
+				</section>	
+
+				<section class="slide-10">
+					<h2>Les Props</h2>
+					<a class="jsbin-embed" href="http://jsbin.com/robanu/embed?js,output">Props on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.35.12"></script>
+				</section>								
+
+				<section class="slide-11">
+					<h2>Les States</h2>
+					<a class="jsbin-embed" href="http://jsbin.com/vewupig/embed?js,output">JS Bin on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.35.12"></script>
 				</section>
 
 				<section>

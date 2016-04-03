@@ -1,0 +1,40 @@
+.reveal {color: #545c68;}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+    color: #545c68; 
+    text-transform: none;
+}
+
+.reveal h1 {
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+.reveal h3 {
+    color: #a2acba;
+    font-size: 1em;
+}
+
+.reveal a {color: #1a8af3;}
+
+.reveal section img {
+    border: 0;
+    box-shadow: none;
+    margin: 0;
+}
+
+.reveal code {color: #1d9e36;}
+
+.slide-7 p {text-align: left;}
+
+.slide-7 ol {margin-left: 2em;}
+
+.slide-7 li {
+    font-size: 80%;
+    margin-bottom: 15px;
+}
